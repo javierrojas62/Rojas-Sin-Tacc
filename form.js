@@ -1,32 +1,31 @@
-//variables form
-let nombreForm = document.getElementById('nombre')
-let emailForm = document.getElementById('email')
+// variable y dom
+let nombreForm = document.querySelector("#nombre");
+let correoForm = document.querySelector("#correo");
 
-
-//eventos
+// eventos
 nombreForm.addEventListener("input", function () {
-    if (nombreForm.value === "") {
-        console.log("Ingrese Nombre")
-    }
-})
+  // console.log(nombreForm.value);
+  if (nombreForm.value === "") {
+    console.log("Ingrese un nombre");
+  }
+});
 
-emailForm.addEventListener("input", function () {
-    if (emailForm.value === "") {
-        console.log("Ingrese correo")
-    }
-})
+correoForm.addEventListener("input", function () {
+  // console.log(correoForm.value);
+  if (correoForm.value === "") {
+    console.log("Ingrese un correo");
+  }
+});
 
-let miFormulario = document.getElementById('miFormulario')
+let formulario = document.querySelector("#formulario");
 
-let info = document.getElementById('info')
+let info = document.querySelector(".info");
 
-// mostrar info
-const mostrarInfo = miFormulario.addEventListener("submit", function (e) {
-    e.preventDefault();
-    info.innerHTML = `
-  <div class = "alert alert-warning" role="alert">
-  <h5>muchas gracias ${nombreForm.value} por tu compra, te enviamos el compobante a:${emailForm.value}</h5>
-  </div>
-  `
-})
+// agregar informacion al DOM
+const pintarInfo = formulario.addEventListener("submit", function (e) {
+  e.preventDefault();
+  info.innerHTML = `
+  <div class="alert alert-warning h5" role="alert">
+<h5> Muchas gracias ${nombreForm.value} por tu compra, te enviamos documentación a: ${correoForm.value} </h5></div>`;
+});
 

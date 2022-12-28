@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Titulo -->
-    <h1 class="text-center">Todo sin Tacc</h1>
+    <h1 class="text-center h1">Todo sin Tacc</h1>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -48,21 +48,33 @@
       </div>
 <!-- formulario -->
 
-<form id="miFormulario">
-  <div class="form-group">
-    <label for="nombre">Nombre:</label>
-    <input type="text" class="form-control" id="nombre" required>
+<!-- formulaio -->
+<div class="container">
+  <div class="container">
+    <h2 class="h2">Contacto</h2>
   </div>
-  <div class="form-group">
-    <label for="email">Email:</label>
-    <input type="email" class="form-control" id="email" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
-</form>
-<!-- mostrar info -->
-<div class="container" >
-  <div  class="info" ></div>
+  <form id="formulario" action="/redireccion">
 
+    <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label"
+      >Nombre y Apellido</label
+      >
+      <input type="text" class="form-control" id="nombre" />
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label"
+      >Correo Electrónico</label
+      >
+      <input type="text" class="form-control" id="correo" />
+    </div>
+    <button type="submit" class="btn btn-outline-success">
+      Enviar información
+    </button>
+  </div>
+</form>
+<!-- ESPACIO PARA MOSTRAR INFO DEL FORMULARIO -->
+<div class="container">
+  <div class="info"></div>
 </div>
 
 
